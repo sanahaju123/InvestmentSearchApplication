@@ -51,6 +51,8 @@ namespace InvestmentSearchApplication.DataLayer.Migrations
                 name: "Ratings",
                 columns: table => new
                 {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     StockId = table.Column<int>(nullable: false),
                     OverallRating = table.Column<decimal>(nullable: false),
                     OwnershipReviewsCount = table.Column<int>(nullable: false),
